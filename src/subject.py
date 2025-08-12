@@ -2,6 +2,7 @@ from ultralytics import YOLO
 import cv2
 
 cap = cv2.VideoCapture('../data/subject.mp4')
+# Video by Mike Bird from Pexels: https://www.pexels.com/video/time-lapse-of-cars-2109463/
 model = YOLO('yolo11n.pt')
 traffic_classes = { # 참고용으로 남겨둔 딕셔너리
             0: 'person', 2: 'car', 3: 'motorcycle', 
