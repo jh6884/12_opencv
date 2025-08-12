@@ -1,4 +1,4 @@
-from ultralytics import YOLO
+from ultralytics import YOLO # type: ignore
 import cv2
 
 cap = cv2.VideoCapture('../data/subject.mp4')
