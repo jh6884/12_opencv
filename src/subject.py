@@ -14,6 +14,7 @@ while True:
         break
     img = cv2.resize(frame, (640, 360))
     results = model(img, classes=7, conf=0.5, verbose=False)
+    # classes를 지정하면 원하는 객체만 표시하도록 변경할 수 있다. classes type: int(위 classes dictionary에서 key에 해당하는 값)
     annotated_frame = results[0].plot()
     cv2.imshow('Yolo', annotated_frame)
     if cv2.waitKey(1) & 0xff == ord('q'):
